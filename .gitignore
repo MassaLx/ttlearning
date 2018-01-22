@@ -25,3 +25,6 @@ dist/
 !ttl-UI/semantic/dist/
 nbdist/
 .nb-gradle/
+
+
+ttl/target/
