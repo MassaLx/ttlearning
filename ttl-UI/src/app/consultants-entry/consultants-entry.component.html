@@ -41,16 +41,18 @@
   </tr></thead>
   <tbody>
   <tr *ngFor="let r of consultants"  class="item">
-    <td>{{r.lastName}}</td>
-    <td>{{ r.firstName }}</td>
-    <td>{{r.position}}</td>
-    <td>{{r.degree1}}</td>
-    <td>{{r.degree2}}</td>
-    <td>{{r.degree3}}</td>
-    <td>{{r.specialist}}</td>
-    <td>{{r.fields}}</td>
-    <td>{{r.expertise}}</td>
-    <td>{{r.interests}}</td>
+    <td><div [innerHTML]="r.lastName  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.firstName  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.position  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.degree1  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.degree2  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.degreee3  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.specialist  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.fields  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.expertise  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.interests  | highlight : message"></div></td>
+    
+  
   </tr>
 
   

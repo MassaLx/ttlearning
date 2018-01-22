@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {ConsultantsEntryComponent} from './consultants-entry/consultants-entry.component';
+
+import { HighlightModule }    from './highlight/highlight.module';
+
 import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
 //  "/people/search/all" --get all people
@@ -12,12 +15,13 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    ConsultantsEntryComponent
+    ConsultantsEntryComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    HighlightModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
