@@ -1,6 +1,6 @@
 # BeerFinder
 It's a web application to do a search operation for consultants in a company.
-https://gentle-tundra-40202.herokuapp.com/
+https://consultantsearch.herokuapp.com/
 
 
 #Introduction
