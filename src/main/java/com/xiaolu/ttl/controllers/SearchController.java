@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/people")
 public class SearchController {
@@ -35,8 +36,14 @@ public class SearchController {
             return employeeService.getQuery(content);
     }
 
+    @RequestMapping(value = "/add", method = {RequestMethod.POST})
+    public EmployeeResponse addNewEmployee(@RequestBody EmployeeRequest employeeRequest) {
+    	//add the new employee to the database
+    	Employee newEmployee = employeeService.insert(employeeRequest.toEmployee());
 
-
+    	//return the result
+    	return new EmployeeResponse(newEmployee);
+    }
 
 
 

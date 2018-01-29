@@ -1,13 +1,48 @@
-<div class="ui grid">
+<!-- <div [ngStyle]="{'display':showForm ? 'none' : 'inline-block' }" class="ui grid"> -->
+<div class="ui grid">  
   <div class="ui one column stackable center aligned page grid">
-    <div class="column">
-      <div class="ui action left icon input">
+    <div [ngStyle]="{'display':showForm ? 'none' : 'inline-block' }" class="column">
+      <div   class="ui action left icon input">
         <i class="search icon"></i>
         <input type="text" placeholder="Search..." (keyup)="onKey($event)">
         <div class="ui teal button" (click)="onClickMe()">Search</div>
+
+        <div [ngStyle]="{'display':showForm ? 'none' : 'block' }" class="ui primary button add-employee-btn" (click)="onClickAdd()">Add Employee</div>
       </div>
     </div>
   </div>
+</div>
+
+<div [ngStyle]="{'display':showForm ? 'inline-block' : 'none' }" class="ui form" id = 'insert-form'>
+  <h4 class="ui dividing header">Add Employee</h4>
+  <div class="field">
+    <label>Name</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" [(ngModel)]="newEmployee.firstName"  placeholder="First Name">
+      </div>
+      <div class="field">
+        <input type="text" [(ngModel)]="newEmployee.lastName"  placeholder="Last Name">
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Other Information</label>
+    <div class="fields">
+      <div class="twelve wide field">
+        <input type="text" [(ngModel)]="newEmployee.position" placeholder="Position">
+      </div>
+      
+    </div>
+  </div>
+
+    <!-- <div><input class="employee-form-field" [(ngModel)]="newEmployee.firstName" placeholder="Firstname"></div>
+    <div><input class="employee-form-field" [(ngModel)]="newEmployee.lastName" placeholder="Lastname"></div> -->
+    <!-- <div><input  class="employee-form-field" [(ngModel)]="newEmployee.position" placeholder="Position"></div> -->
+
+    <div><div class="ui teal button" (click)="onClickSave()">Save Employee</div></div>
+  <!-- </form> -->
 </div>
 
 <!--<div class="ui list">-->
@@ -26,6 +61,7 @@
   <!--</div>-->
 <!--</div>-->
 
+<table [ngStyle]="{'display':showForm ? 'none' : 'table' }" class="ui celled table">
 <table class="ui celled table">
   <thead>
   <tr><th>Lastname</th>

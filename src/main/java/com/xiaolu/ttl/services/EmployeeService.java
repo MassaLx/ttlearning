@@ -27,6 +27,8 @@ public class EmployeeService {
         return this.employeeRepository.findAll();
     }
 
-
+    public Employee insert(Employee employee) {
+        return this.employeeRepository.save(employee);
+    }
 
 }

@@ -13,7 +13,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 
-    List<Employee> findAll();
+//    List<Employee> findAll();
 
     @Query(value = "select * from ttl_consultants t where " +
             "concat( t.firstName, ' ', t.lastName ) like %:content% or " +
@@ -29,4 +29,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
             "t.expertise like %:content% or " +
             "t.interests like %:content%", nativeQuery = true)
     List<Employee> getResultByContent(@Param("content") String content);
+
+//    Employee save(Employee employee);
+
 }
