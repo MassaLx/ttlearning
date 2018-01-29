@@ -20,7 +20,15 @@ export class ConsultantsEntryComponent implements OnInit {
     firstName: '',
     lastName: '',
     position: '',
+    degree1: '',
+    degree2: '',
+    degree3: '',
+    specialist: '',
+    fields: '',
+    expertise: '',
+    interests:'',
   };
+
   formStyle = '';
   constructor(
   private consultantsService: ConsultantsService,
@@ -73,6 +81,13 @@ export class ConsultantsEntryComponent implements OnInit {
   that.newEmployee.firstName = '';
   that.newEmployee.lastName = '';
   that.newEmployee.position = '';
+  that.newEmployee.degree1 = '';
+  that.newEmployee.degree2 = '';
+  that.newEmployee.degree3 = '';
+  that.newEmployee.specialist = '';
+  that.newEmployee.field = '';
+  that.newEmployee.expertise = '';
+  that.newEmployee.interests = '';
     
   }
 }

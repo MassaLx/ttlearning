@@ -4,7 +4,7 @@ import { Consultant } from '../../shared/consultants';
 export const Consultants: Consultant[] = [
   { firstName: 'Xiao',
   lastName: 'Lu',
-  position: 'JB',
+  position: 'ST',
   degree1: 'BSCS',
   degree2: 'MSCS',
   degree3: 'PHD',
@@ -14,7 +14,7 @@ export const Consultants: Consultant[] = [
   interests: 'Video'},
   { firstName: 'YUANXING',
     lastName: 'YIN',
-    position: 'JB2',
+    position: 'J2',
     degree1: 'BSCS2',
     degree2: 'MSCS2',
     degree3: 'PHD2',
