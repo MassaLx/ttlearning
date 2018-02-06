@@ -20,14 +20,16 @@ export class EmployeeService {
   constructor(
     private http: HttpClient) { }
 
-  
+
 
   insertEmployee(newEmployee: NewEmployee, cb: Function, that)  {
     this.http.post(environment.apiUrl + '/people/add', newEmployee)
     .subscribe(res => cb(that));
   }
 
-  
+
+
+
 
   /**
    * Handle Http operation that failed.

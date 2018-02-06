@@ -1,5 +1,5 @@
 <!-- <div [ngStyle]="{'display':showForm ? 'none' : 'inline-block' }" class="ui grid"> -->
-<div class="ui grid">  
+<div class="ui grid">
   <div class="ui one column stackable center aligned page grid">
     <div [ngStyle]="{'display':showForm ? 'none' : 'inline-block' }" class="column">
       <div   class="ui action left icon input">
@@ -33,7 +33,7 @@
       <div class="twelve wide field">
         <input type="text" [(ngModel)]="newEmployee.position" placeholder="Position">
       </div>
-      
+
     </div>
   </div>
 
@@ -51,11 +51,11 @@
       <div class="twelve wide field">
         <input type="text" [(ngModel)]="newEmployee.degree3" placeholder="Degree3">
       </div>
-      
+
     </div>
   </div>
 
- 
+
 
   <div class="field">
     <label>Application Specialties</label>
@@ -63,7 +63,7 @@
       <div class="twelve wide field">
         <input type="text" [(ngModel)]="newEmployee.specialist" placeholder="Application Specialties">
       </div>
-      
+
     </div>
   </div>
 
@@ -73,7 +73,7 @@
       <div class="twelve wide field">
         <input type="text" [(ngModel)]="newEmployee.fields" placeholder="Career Fields">
       </div>
-      
+
     </div>
   </div>
 
@@ -83,7 +83,7 @@
       <div class="twelve wide field">
         <input type="text" [(ngModel)]="newEmployee.expertise" placeholder="Areas of Expertise">
       </div>
-      
+
     </div>
   </div>
 
@@ -93,7 +93,7 @@
       <div class="twelve wide field">
         <input type="text" [(ngModel)]="newEmployee.interests" placeholder="Personal Interests">
       </div>
-      
+
     </div>
   </div>
 
@@ -124,7 +124,9 @@
 <table [ngStyle]="{'display':showForm ? 'none' : 'table' }" class="ui celled table">
 <table class="ui celled table">
   <thead>
-  <tr><th>Lastname</th>
+  <tr>
+    <th>Edit</th>
+    <th>Lastname</th>
     <th>Firstname</th>
     <th>Position</th>
     <th>Degree1</th>
@@ -137,19 +139,21 @@
   </tr></thead>
   <tbody>
   <tr *ngFor="let r of consultants"  class="item">
+    <td><div class="ui teal button" (click)="onClickDelete(r.id)">Delete</div></td>
     <td><div [innerHTML]="r.lastName  | highlight : message"></div></td>
     <td><div [innerHTML]="r.firstName  | highlight : message"></div></td>
     <td><div [innerHTML]="r.position  | highlight : message"></div></td>
     <td><div [innerHTML]="r.degree1  | highlight : message"></div></td>
     <td><div [innerHTML]="r.degree2  | highlight : message"></div></td>
-    <td><div [innerHTML]="r.degreee3  | highlight : message"></div></td>
+    <td><div [innerHTML]="r.degree3  | highlight : message"></div></td>
     <td><div [innerHTML]="r.specialist  | highlight : message"></div></td>
     <td><div [innerHTML]="r.fields  | highlight : message"></div></td>
     <td><div [innerHTML]="r.expertise  | highlight : message"></div></td>
     <td><div [innerHTML]="r.interests  | highlight : message"></div></td>
-    
-  
+
+
+
   </tr>
 
-  
+
 </table>

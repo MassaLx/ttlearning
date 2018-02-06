@@ -45,7 +45,7 @@ export class ConsultantsEntryComponent implements OnInit {
 
   onKey(event: any) { // without type info
     this.message = event.target.value;
-    
+
     console.log(event)
   }
 
@@ -66,7 +66,16 @@ export class ConsultantsEntryComponent implements OnInit {
 
   onClickAdd() {
     this.showForm = true;
-    
+
+  }
+
+  onClickDelete(id) {
+    this.consultantsService.deleteConsultant(id, this.lose, this);
+  }
+
+  lose(that) {
+    console.log("lose");
+    that.onClickMe();
   }
 
   hideForm(that) {
@@ -88,6 +97,6 @@ export class ConsultantsEntryComponent implements OnInit {
   that.newEmployee.field = '';
   that.newEmployee.expertise = '';
   that.newEmployee.interests = '';
-    
+
   }
 }

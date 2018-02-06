@@ -45,6 +45,18 @@ public class SearchController {
     	return new EmployeeResponse(newEmployee);
     }
 
+    @RequestMapping(value = "/delete", method = {RequestMethod.DELETE})
+    public boolean deleteEmployee(@RequestParam("id") long id) {
+        try {
+            employeeService.deleteQuery(id);
+            return true;
+        } catch(Exception e) {
+            SearchController.LOGGER.error("Exception occurred when deleting the id: " + id, e);
+            return false;
+        }
+
+//        employeeService.deleteQuery(id);
+    }
 
 
 }

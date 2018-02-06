@@ -36,6 +36,16 @@ export class ConsultantsService {
       .catch(this.handleError);
   }
 
+  deleteConsultant(id: number, cb: Function, that) {
+    this.http.delete(environment.apiUrl + '/people/delete?id=' + id)
+      .toPromise()
+      .then(res => {
+        console.log(res);
+        cb(that)
+      })
+      .catch(this.handleError);
+  }
+
 /*
 
   insertEmployee(newEmployee: NewEmployee): Observable<NewEmployee> {
@@ -51,7 +61,7 @@ tap((newEmployee: NewEmployee) => console.log(newEmployee)),
     );
 
 
-    
+
   }
 
   */

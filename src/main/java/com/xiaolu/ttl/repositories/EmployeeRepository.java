@@ -31,5 +31,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> getResultByContent(@Param("content") String content);
 
 //    Employee save(Employee employee);
+//
+//    @Query(value = "delete from ttl_consultants where ttl_consultants.id = ?1", nativeQuery = true)
+//    void deleteInDB(@Param("id") Long id);
 
 }
