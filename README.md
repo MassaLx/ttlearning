@@ -1,4 +1,4 @@
-# BeerFinder
+# ttl
 It's a web application to do a search operation for consultants in a company.
 https://consultantsearch.herokuapp.com/
 
